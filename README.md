@@ -1,5 +1,5 @@
 # FilmBox
-Learning React and ES6 by building a Movie Discovery App.
+Learning React and ES6 by building a Movie Discovery App.  
 Advanced movie discovery website.
 
 ## Screans
@@ -7,5 +7,3 @@ Advanced movie discovery website.
 - [ ] TV Shows
 - [ ] Search
 - [ ] Detail
-
-
