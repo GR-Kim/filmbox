@@ -8,7 +8,7 @@ import {
 import Header from "./Header";
 import Home from "../Routes/Home";
 import Search from "../Routes/Search";
-import Tv from "../Routes/Tv";
+import TV from "../Routes/TV";
 
 const router = () => (
   <Router>
@@ -16,7 +16,7 @@ const router = () => (
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/tv" exact component={Tv} />
+        <Route path="/tv" exact component={TV} />
         <Route path="/tv/popular" render={() => <h1>popular</h1>} />
         <Route path="/search" component={Search} />
         <Redirect from="*" to="/" />
