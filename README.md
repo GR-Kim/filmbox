@@ -11,8 +11,10 @@ Advanced movie discovery website.
 
 ## API verbs
 
-- [ ] Now playing (Movie)
-- [ ] Upcoming (Movie)
-- [ ] Top Rated (TV, Movie)
-- [ ] Popular (TV, Movie)
-- [ ] Airing Today (TV)
+- [X] Now playing (Movie)
+- [X] Upcoming (Movie)
+- [X] Top Rated (TV)
+- [X] Popular (TV, Movie)
+- [X] Airing Today (TV)
+- [ ] TV Show Detail
+- [ ] Movie Detail
