@@ -16,5 +16,6 @@ Advanced movie discovery website.
 - [X] Top Rated (TV)
 - [X] Popular (TV, Movie)
 - [X] Airing Today (TV)
-- [ ] TV Show Detail
-- [ ] Movie Detail
+- [X] TV Show Detail
+- [X] Movie Detail
+- [X] Search (Movie, TV)
