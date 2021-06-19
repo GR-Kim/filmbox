@@ -9,6 +9,7 @@ import Header from "./Header";
 import Home from "../Routes/Home";
 import Search from "../Routes/Search";
 import TV from "../Routes/TV";
+import Detail from "../Routes/Detail";
 
 const router = () => (
   <Router>
@@ -19,6 +20,8 @@ const router = () => (
         <Route path="/tv" exact component={TV} />
         <Route path="/tv/popular" render={() => <h1>popular</h1>} />
         <Route path="/search" component={Search} />
+        <Route path="/movie/:id" component={Detail} />
+        <Route path="/tv/:id" component={Detail} />
         <Redirect from="*" to="/" />
       </Switch>
     </>
