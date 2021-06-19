@@ -1,5 +1,5 @@
 import React from "react";
-import { moviesAPi } from "../../api";
+import { moviesApi } from "../../api";
 import HomePresenter from "./HomePresenter";
 
 class HomeContainer extends React.Component {
@@ -17,13 +17,13 @@ class HomeContainer extends React.Component {
     try {
       const {
         data: { results: nowPlaying },
-      } = await moviesAPi.nowPlaying();
+      } = await moviesApi.nowPlaying();
       const {
         data: { results: upcoming },
-      } = await moviesAPi.upcoming();
+      } = await moviesApi.upcoming();
       const {
         data: { results: popular },
-      } = await moviesAPi.popular();
+      } = await moviesApi.popular();
 
       this.setState({
         nowPlaying,
@@ -33,7 +33,7 @@ class HomeContainer extends React.Component {
 
     } catch {
       this.setState({
-        error: "Can't find movies information",
+        error: "Can't find movie information",
       });
     } finally {
       this.setState({ loading: false });

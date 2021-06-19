@@ -1,4 +1,5 @@
 import React from "react";
+import { tvApi } from "../../api";
 import TVPresenter from "./TVPresenter";
 
 class TVContainer extends React.Component {
@@ -10,8 +11,29 @@ class TVContainer extends React.Component {
     error: null,
   };
 
+  async componentDidMount() {
+    try {
+      const {
+        data: { results: topRated },
+      } = await tvApi.topRated();
+      const {
+        data: { results: popular },
+      } = await tvApi.popular();
+      const {
+        data: { results: airingToday },
+      } = await tvApi.airingToday();
+
+      this.setState({ topRated, popular, airingToday });
+    } catch {
+      this.setState({ error: "Can't find TV information" });
+    } finally {
+      this.setState({ loading: false });
+    }
+  }
+
   render() {
     const { topRated, popular, airingToday, loading, error } = this.state;
+    console.log(this.state);
     return (
       <TVPresenter
         topRated={topRated}
