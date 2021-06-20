@@ -21,7 +21,7 @@ const router = () => (
         <Route path="/tv/popular" render={() => <h1>popular</h1>} />
         <Route path="/search" component={Search} />
         <Route path="/movie/:id" component={Detail} />
-        <Route path="/tv/:id" component={Detail} />
+        <Route path="/tv/:id" exact component={Detail} />
         <Redirect from="*" to="/" />
       </Switch>
     </>

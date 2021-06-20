@@ -30,18 +30,17 @@ class DetailContainer extends React.Component {
     }
     //왜 const로 받으면 안되지?
     let result = null;
-    try{
-      if(isMovie){
+    try {
+      if (isMovie) {
         //data를 받으면 되는데 이를 result라는 이름으로 받음.
-        ({data: result} = await moviesApi.movieDetail(parsedID));
-      } else{
-        ({data: result} = await tvApi.showDetail(parsedID));
+        ({ data: result } = await moviesApi.movieDetail(parsedID));
+      } else {
+        ({ data: result } = await tvApi.showDetail(parsedID));
       }
-      
-    }catch{
-      this.setState({error: "Can't find anything"});
-    }finally{
-      this.setState({loading: false, result});
+    } catch {
+      this.setState({ error: "Can't find anything" });
+    } finally {
+      this.setState({ loading: false, result });
     }
   }
 

@@ -1,3 +1,16 @@
-const TVpresenter = () => "TV";
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-export default TVpresenter;
+const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => null;
+
+TVPresenter.propTypes = {
+    topRated: PropTypes.array,
+    popular: PropTypes.array,
+    airingToday: PropTypes.array,
+    loading: PropTypes.bool.isRequired,
+    error: PropTypes.string
+};
+
+// export default 잊지 말기 
+export default TVPresenter;
